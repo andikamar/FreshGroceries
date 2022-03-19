@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp">
+
+    <ImageView
+        android:id="@+id/imgFruit"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@id/imgFruit"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNameFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#AD000000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/priceFruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#7D7777"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:progressTint="#FCAF05" />
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_marginTop="15dp"
+            android:layout_width="73dp"
+            android:layout_height="35dp"
+            android:layout_toEndOf="@id/rating"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/bg_buy"
+            android:text="@string/buy"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="50dp"/>
+    </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
